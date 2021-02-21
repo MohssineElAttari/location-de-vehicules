@@ -423,12 +423,13 @@
                     display: flex;
                     padding: 20px 20px;
                     justify-content: center;
-                    flex-wrap: wrap;
                     background-color: rgb(20, 20, 20);
+                    /*  */
                 }
                 
                 main .contact-us .cForm {
                     margin: 0 40px 20px 0;
+                    width: 40vw;
                 }
                 
                 main .contact-us .cForm input {
@@ -437,6 +438,11 @@
                     margin-bottom: 15px;
                     border-radius: 5px;
                     padding: 0 10px;
+                }
+                
+                main .contact-us .cMaps iframe {
+                    width: 40vw;
+                    display: block;
                 }
                 
                 main .contact-us .cForm .cNamePhone {
@@ -461,8 +467,7 @@
                     margin-bottom: 10px;
                     color: white;
                 }
-                
-                main .cMaps {}
+                /* main .cMaps {}s */
                 
                 main .cMaps p {
                     font-size: 13px;
@@ -473,4 +478,60 @@
                 main .cMaps p .title {
                     color: #fddb3a;
                     font-weight: bold;
+                }
+                /* The Modal (background) */
+                
+                @media all and(max-width:900px) {
+                    main .contact-us {
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        width: 100%;
+                    }
+                }
+                
+                .modal {
+                    display: none;
+                    /* Hidden by default */
+                    position: fixed;
+                    /* Stay in place */
+                    z-index: 1;
+                    /* Sit on top */
+                    padding-top: 100px;
+                    /* Location of the box */
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    /* Full width */
+                    height: 100%;
+                    /* Full height */
+                    overflow: auto;
+                    /* Enable scroll if needed */
+                    background-color: rgb(0, 0, 0);
+                    /* Fallback color */
+                    background-color: rgba(0, 0, 0, 0.4);
+                    /* Black w/ opacity */
+                }
+                /* Modal Content */
+                
+                .modal-content {
+                    background-color: #fefefe;
+                    margin: auto;
+                    padding: 20px;
+                    border: 1px solid #888;
+                    width: 80%;
+                }
+                /* The Close Button */
+                
+                .close {
+                    color: #aaaaaa;
+                    float: right;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+                
+                .close:hover,
+                .close:focus {
+                    color: #000;
+                    text-decoration: none;
+                    cursor: pointer;
                 }
