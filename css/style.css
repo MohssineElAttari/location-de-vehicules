@@ -629,6 +629,9 @@ main .Gallery .gallery-cars .gallery-title {
     }
 }
 
+
+/* test */
+
 @media all and (max-width:1000px) {
     main .Gallery {
         /* flex-direction: column; */
