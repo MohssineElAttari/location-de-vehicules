@@ -6,7 +6,7 @@ $(document).ready(function() {
     });
 });
 
-
+//test
 // Get the modal
 var modal = document.getElementById("myModal");
 
