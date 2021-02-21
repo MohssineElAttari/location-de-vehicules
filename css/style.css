@@ -424,7 +424,7 @@
                     padding: 20px 20px;
                     justify-content: center;
                     background-color: rgb(20, 20, 20);
-                    /*  */
+                    flex-wrap: wrap;
                 }
                 
                 main .contact-us .cForm {
@@ -441,7 +441,7 @@
                 }
                 
                 main .contact-us .cMaps iframe {
-                    width: 40vw;
+                    width: 500px;
                     display: block;
                 }
                 
@@ -481,11 +481,17 @@
                 }
                 /* The Modal (background) */
                 
-                @media all and(max-width:900px) {
+                @media all and (max-width:900px) {
                     main .contact-us {
                         flex-direction: column;
                         flex-wrap: wrap;
                         width: 100%;
+                    }
+                    main .contact-us .cForm {
+                        width: 400px;
+                    }
+                    main .contact-us .cMaps iframe {
+                        width: 400px;
                     }
                 }
                 
