@@ -1,543 +1,652 @@
-                * {
-                    box-sizing: border-box;
-                    margin: 0;
-                    padding: 0;
-                    font-family: sans-serif;
-                    overflow-x: hidden;
-                }
-                
-                body {
-                    margin: 0;
-                    overflow-x: hidden;
-                }
-                
-                header {
-                    /* padding: 15px 5%; */
-                    height: 100vh;
-                    width: 100vw;
-                    position: relative;
-                    background-color: rgba(0, 0, 0, 0.750);
-                }
-                
-                .header-content {
-                    position: absolute;
-                    top: 30%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    color: white;
-                    text-align: center;
-                }
-                
-                .header-content .pha1 {
-                    font-size: 5vw;
-                    font-weight: 600;
-                    padding-bottom: 10px;
-                }
-                
-                .header-content .pha2 {
-                    color: #fddb3a;
-                    margin-bottom: 10px;
-                }
-                
-                .header-content p {
-                    padding: 20px 0;
-                    font-size: 1.5vw;
-                    margin-bottom: 10px;
-                }
-                
-                .header-content button {
-                    width: 200px;
-                    height: 60px;
-                    font-size: 25px;
-                    background-color: #fddb3a;
-                    font-weight: bold;
-                    border-radius: 40px;
-                    margin-bottom: 10px;
-                }
-                
-                nav {
-                    background-color: rgba(0, 0, 0, 0.712);
-                    padding: 5px 60px;
-                    z-index: 1;
-                }
-                
-                nav ul {
-                    display: flex;
-                    flex-wrap: wrap;
-                    list-style: none;
-                    align-items: center;
-                    justify-content: center;
-                }
-                
-                nav ul li {
-                    padding: 15px 0;
-                    cursor: pointer;
-                    align-items: center;
-                }
-                
-                nav ul li.nav_links {
-                    width: auto;
-                    margin: 0 16px;
-                    text-align: center;
-                    position: relative;
-                    order: 3;
-                }
-                
-                nav ul li.nav_links:after {
-                    position: absolute;
-                    content: '';
-                    height: 2px;
-                    width: 100%;
-                    background: #fddb3a;
-                    left: 0;
-                    bottom: 9px;
-                    opacity: 0;
-                    transition: all 0.2s linear;
-                }
-                
-                nav ul li.nav_links:hover:after {
-                    opacity: 1;
-                    bottom: 8px;
-                }
-                
-                nav ul li.logo {
-                    flex: 1;
-                    font-size: 25px;
-                    font-weight: 700;
-                    cursor: default;
-                    user-select: none;
-                    color: #fddb3a;
-                }
-                
-                nav ul li.logo span {
-                    color: white;
-                }
-                
-                nav ul li a {
-                    color: white;
-                    text-decoration: none;
-                    font-size: 18px;
-                    transition: .4s;
-                }
-                
-                nav ul li:hover a {
-                    color: #fddb3a;
-                }
-                
-                nav ul li i {
-                    font-size: 23px;
-                }
-                
-                nav ul li.btn {
-                    display: none;
-                }
-                
-                nav ul li.btn.hide i:before {
-                    content: '\f00d';
-                }
-                
-                @media all and (max-width:900px) {
-                    nav {
-                        padding: 5px 30px;
-                    }
-                    nav ul li.nav_links {
-                        width: 100%;
-                        display: none;
-                    }
-                    nav ul li.nav_links.show {
-                        display: block;
-                    }
-                    .header-content p {
-                        font-size: 15px;
-                    }
-                    .header-content .pha1 {
-                        font-size: 40px;
-                    }
-                    .header-content button {
-                        width: 130px;
-                        height: 40px;
-                        font-size: 15px;
-                    }
-                    /* nav ul li.nav_links a:hover {
-        box-shadow: 0 0 5px #fddb3a, 0 0 10px #1f1a05;
-        border-radius: 5px;
-    } */
-                    nav ul li.nav_links:after {
-                        opacity: 0;
-                    }
-                    nav ul li.btn {
-                        display: block;
-                    }
-                }
-                /* nav li a { */
-                /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
-                /* font-weight: 500; */
-                /* font-size: 16px; */
-                /* color: #000000;
-    text-decoration: none;
-    transition: all 0.5s ease 0s;
-    font-size: 20px; */
-                /* } */
-                /* header nav li a:hover {
-    color: #0088a9;
-} */
-                /* .logo {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    /* padding: 15px 5%; */
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.750);
+}
+
+.header-content {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+}
+
+.header-content .pha1 {
+    font-size: 5vw;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.header-content .pha2 {
+    color: #fddb3a;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    padding: 20px 0;
+    font-size: 1.5vw;
+    margin-bottom: 10px;
+}
+
+.header-content button {
+    width: 200px;
+    height: 60px;
+    font-size: 25px;
+    background-color: #fddb3a;
+    font-weight: bold;
+    border-radius: 40px;
+    margin-bottom: 10px;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.712);
+    padding: 5px 60px;
+    z-index: 1;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li {
+    padding: 15px 0;
     cursor: pointer;
-    width: 100px;
-    height: 80px;
+    align-items: center;
+}
+
+nav ul li.nav_links {
+    width: auto;
+    margin: 0 16px;
+    text-align: center;
+    position: relative;
+    order: 3;
+}
+
+nav ul li.nav_links:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #fddb3a;
+    left: 0;
+    bottom: 9px;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+
+nav ul li.nav_links:hover:after {
+    opacity: 1;
+    bottom: 8px;
+}
+
+nav ul li.logo {
+    flex: 1;
+    font-size: 25px;
+    font-weight: 700;
+    cursor: default;
+    user-select: none;
+    color: #fddb3a;
+}
+
+nav ul li.logo span {
+    color: white;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: .4s;
+}
+
+nav ul li:hover a {
+    color: #fddb3a;
+}
+
+nav ul li i {
+    font-size: 23px;
+}
+
+nav ul li.btn {
+    display: none;
+}
+
+nav ul li.btn.hide i:before {
+    content: '\f00d';
+}
+
+@media all and (max-width:900px) {
+    nav {
+        padding: 5px 30px;
+    }
+    nav ul li.nav_links {
+        width: 100%;
+        display: none;
+    }
+    nav ul li.nav_links.show {
+        display: block;
+    }
+    .header-content p {
+        font-size: 15px;
+    }
+    .header-content .pha1 {
+        font-size: 40px;
+    }
+    .header-content button {
+        width: 130px;
+        height: 40px;
+        font-size: 15px;
+    }
+    /* nav ul li.nav_links a:hover {
+box-shadow: 0 0 5px #fddb3a, 0 0 10px #1f1a05;
+border-radius: 5px;
 } */
-                
-                .mVideo video {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    z-index: -1;
-                    max-width: 100%;
-                    max-height: 100%;
-                }
-                
-                .footer {
-                    background: #000;
-                    padding: 30px 0px;
-                    font-family: 'Play', sans-serif;
-                    text-align: center;
-                }
-                
-                .footer .row {
-                    width: 100%;
-                    margin: 1% 0%;
-                    padding: 0.4% 0%;
-                    color: gray;
-                    font-size: 0.8em;
-                }
-                
-                .footer .row a {
-                    text-decoration: none;
-                    color: gray;
-                    transition: 0.5s;
-                }
-                
-                .footer .row a:hover {
-                    color: #fff;
-                }
-                
-                .footer .row ul {
-                    width: 100%;
-                }
-                
-                .footer .row ul li {
-                    display: inline-block;
-                    margin: 0px 30px;
-                }
-                
-                .footer .row a i {
-                    font-size: 2em;
-                    margin: 0% 1%;
-                }
-                
-                @media all and (max-width:720px) {
-                    .footer {
-                        text-align: left;
-                        padding: 4%;
-                    }
-                    .footer .row ul li {
-                        display: block;
-                        margin: 10px 0px;
-                        text-align: left;
-                    }
-                    .footer .row a i {
-                        margin: 0% 3%;
-                    }
-                }
-                
-                main h2 {
-                    text-align: center;
-                    color: #fddb3a;
-                    padding: 25px 0;
-                }
-                
-                .WHY-CHOOSE {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: space-between;
-                    width: 90%;
-                    height: 100%;
-                    text-align: center;
-                    margin: 0 auto;
-                    flex-wrap: wrap;
-                }
-                
-                .WHY-CHOOSE .Answer {
-                    /* width: 25vw; */
-                    flex: 25%;
-                    padding: 10px 25px;
-                }
-                
-                .WHY-CHOOSE .Answer img {
-                    width: 6vw;
-                    height: 6wh;
-                }
-                
-                .WHY-CHOOSE .Answer h3 {
-                    color: #fddb3a;
-                    padding: 25px 0;
-                    font-weight: bold;
-                }
-                
-                @media all and (max-width:1000px) {
-                    .WHY-CHOOSE {
-                        /* flex-direction: column; */
-                    }
-                    .WHY-CHOOSE .Answer {
-                        flex: 50%;
-                    }
-                }
-                
-                @media all and (max-width:720px) {
-                    .WHY-CHOOSE {
-                        /* flex-direction: column; */
-                    }
-                    .WHY-CHOOSE .Answer {
-                        flex: 100%;
-                    }
-                }
-                
-                main h2 {
-                    text-align: center;
-                    color: #fddb3a;
-                    padding: 25px 0;
-                    font-weight: bold;
-                }
-                
-                .featured-cars {
-                    display: flex;
-                    padding: 10px 20px;
-                    align-items: center;
-                    justify-content: space-between;
-                    width: 90%;
-                    height: 100%;
-                    text-align: center;
-                    margin: 0 auto;
-                    flex-wrap: wrap;
-                }
-                
-                .featured-cars .cars {
-                    width: 32%;
-                    padding: 10px 20px;
-                }
-                
-                .featured-cars .cars img {
-                    width: 100%;
-                    height: 100%;
-                }
-                
-                .featured-cars .cars h3 {
-                    text-align: center;
-                    color: #fddb3a;
-                    justify-content: center;
-                    margin: 10px 0;
-                }
-                
-                @media all and (max-width:1000px) {
-                    .featured-cars .cars {
-                        width: 50%;
-                        padding: 10px 20px;
-                    }
-                }
-                
-                @media all and (max-width:720px) {
-                    .featured-cars .cars {
-                        width: 100%;
-                        padding: 10px 20px;
-                    }
-                }
-                
-                .about-cars {
-                    display: flex;
-                    padding: 40px 30px;
-                    align-items: center;
-                    justify-content: center;
-                    width: 75%;
-                    height: unset;
-                    margin-bottom: 20px;
-                    margin: 0 auto 20px auto;
-                    background-color: rgb(0, 0, 0);
-                    border-radius: 50px;
-                }
-                
-                .about-cars p {
-                    width: 85%;
-                    /* height: 100%; */
-                    margin-right: 10px;
-                    /* overflow-y: hidden; */
-                    color: white;
-                    text-align: center;
-                }
-                
-                .about-cars p span.phara1 {
-                    display: block;
-                    padding-bottom: 20px;
-                }
-                
-                .about-cars img {
-                    object-fit: contain;
-                    width: 323px;
-                    height: 100%;
-                    margin-left: 10px;
-                    border-radius: 50px;
-                }
-                
-                @media all and (max-width:1255px) {
-                    .about-cars {
-                        flex-direction: column;
-                        width: 75%;
-                    }
-                }
-                /* contact style */
-                
-                header .mbackground img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
-                    width: 100%;
-                    object-fit: fill;
-                    z-index: -1;
-                }
-                
-                header .header-content h1 {
-                    font-size: 100px;
-                }
-                
-                header .header-content {
-                    width: 50%;
-                    height: 50%;
-                }
-                /* end contact style */
-                
-                main .contact-us {
-                    display: flex;
-                    padding: 20px 20px;
-                    justify-content: center;
-                    background-color: rgb(20, 20, 20);
-                    flex-wrap: wrap;
-                }
-                
-                main .contact-us .cForm {
-                    margin: 0 40px 20px 0;
-                    width: 40vw;
-                }
-                
-                main .contact-us .cForm input {
-                    width: 100%;
-                    height: 40px;
-                    margin-bottom: 15px;
-                    border-radius: 5px;
-                    padding: 0 10px;
-                }
-                
-                main .contact-us .cMaps iframe {
-                    width: 500px;
-                    display: block;
-                }
-                
-                main .contact-us .cForm .cNamePhone {
-                    width: 100%;
-                }
-                
-                textarea {
-                    width: 100%;
-                    height: 80px;
-                    border-radius: 5px;
-                    padding: 10px 10px;
-                }
-                
-                main .contact-us .cForm button {
-                    margin-top: 20px;
-                    width: 150px;
-                    height: 50px;
-                    font-size: 15px;
-                    background-color: #fddb3a;
-                    font-weight: bold;
-                    /* border-radius: 40px; */
-                    margin-bottom: 10px;
-                    color: white;
-                }
-                /* main .cMaps {}s */
-                
-                main .cMaps p {
-                    font-size: 13px;
-                    padding: 10px;
-                    color: white;
-                }
-                
-                main .cMaps p .title {
-                    color: #fddb3a;
-                    font-weight: bold;
-                }
-                /* The Modal (background) */
-                
-                @media all and (max-width:900px) {
-                    main .contact-us {
-                        flex-direction: column;
-                        flex-wrap: wrap;
-                        width: 100%;
-                    }
-                    main .contact-us .cForm {
-                        width: 400px;
-                    }
-                    main .contact-us .cMaps iframe {
-                        width: 400px;
-                    }
-                }
-                
-                .modal {
-                    display: none;
-                    /* Hidden by default */
-                    position: fixed;
-                    /* Stay in place */
-                    z-index: 1;
-                    /* Sit on top */
-                    padding-top: 100px;
-                    /* Location of the box */
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    /* Full width */
-                    height: 100%;
-                    /* Full height */
-                    overflow: auto;
-                    /* Enable scroll if needed */
-                    background-color: rgb(0, 0, 0);
-                    /* Fallback color */
-                    background-color: rgba(0, 0, 0, 0.4);
-                    /* Black w/ opacity */
-                }
-                /* Modal Content */
-                
-                .modal-content {
-                    background-color: #fefefe;
-                    margin: auto;
-                    padding: 20px;
-                    border: 1px solid #888;
-                    width: 80%;
-                }
-                /* The Close Button */
-                
-                .close {
-                    color: #aaaaaa;
-                    float: right;
-                    font-size: 28px;
-                    font-weight: bold;
-                }
-                
-                .close:hover,
-                .close:focus {
-                    color: #000;
-                    text-decoration: none;
-                    cursor: pointer;
-                }
+    nav ul li.nav_links:after {
+        opacity: 0;
+    }
+    nav ul li.btn {
+        display: block;
+    }
+}
+
+
+/* nav li a { */
+
+
+/* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+
+
+/* font-weight: 500; */
+
+
+/* font-size: 16px; */
+
+
+/* color: #000000;
+text-decoration: none;
+transition: all 0.5s ease 0s;
+font-size: 20px; */
+
+
+/* } */
+
+
+/* header nav li a:hover {
+color: #0088a9;
+} */
+
+
+/* .logo {
+cursor: pointer;
+width: 100px;
+height: 80px;
+} */
+
+.mVideo video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.footer {
+    background: #000;
+    padding: 30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align: center;
+}
+
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.4% 0%;
+    color: gray;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    text-decoration: none;
+    color: gray;
+    transition: 0.5s;
+}
+
+.footer .row a:hover {
+    color: #fff;
+}
+
+.footer .row ul {
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0% 1%;
+}
+
+@media all and (max-width:720px) {
+    .footer {
+        text-align: left;
+        padding: 4%;
+    }
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: left;
+    }
+    .footer .row a i {
+        margin: 0% 3%;
+    }
+}
+
+main h2 {
+    text-align: center;
+    color: #fddb3a;
+    padding: 25px 0;
+}
+
+.WHY-CHOOSE {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.WHY-CHOOSE .Answer {
+    /* width: 25vw; */
+    flex: 25%;
+    padding: 10px 25px;
+}
+
+.WHY-CHOOSE .Answer img {
+    width: 6vw;
+    height: 6wh;
+}
+
+.WHY-CHOOSE .Answer h3 {
+    color: #fddb3a;
+    padding: 25px 0;
+    font-weight: bold;
+}
+
+@media all and (max-width:1000px) {
+    .WHY-CHOOSE {
+        /* flex-direction: column; */
+    }
+    .WHY-CHOOSE .Answer {
+        flex: 50%;
+    }
+}
+
+@media all and (max-width:720px) {
+    .WHY-CHOOSE {
+        /* flex-direction: column; */
+    }
+    .WHY-CHOOSE .Answer {
+        flex: 100%;
+    }
+}
+
+main h2 {
+    text-align: center;
+    color: #fddb3a;
+    padding: 25px 0;
+    font-weight: bold;
+}
+
+.featured-cars {
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.featured-cars .cars {
+    width: 32%;
+    padding: 10px 20px;
+}
+
+.featured-cars .cars img {
+    width: 100%;
+    height: 100%;
+}
+
+.featured-cars .cars h3 {
+    text-align: center;
+    color: #fddb3a;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+@media all and (max-width:1000px) {
+    .featured-cars .cars {
+        width: 50%;
+        padding: 10px 20px;
+    }
+}
+
+@media all and (max-width:720px) {
+    .featured-cars .cars {
+        width: 100%;
+        padding: 10px 20px;
+    }
+}
+
+.about-cars {
+    display: flex;
+    padding: 40px 30px;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: unset;
+    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50px;
+}
+
+.about-cars p {
+    width: 85%;
+    /* height: 100%; */
+    margin-right: 10px;
+    /* overflow-y: hidden; */
+    color: white;
+    text-align: center;
+}
+
+.about-cars p span.phara1 {
+    display: block;
+    padding-bottom: 20px;
+}
+
+.about-cars img {
+    object-fit: contain;
+    width: 323px;
+    height: 100%;
+    margin-left: 10px;
+    border-radius: 50px;
+}
+
+@media all and (max-width:1255px) {
+    .about-cars {
+        flex-direction: column;
+        width: 75%;
+    }
+}
+
+
+/* contact style */
+
+header .mbackground img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    z-index: -1;
+}
+
+header .header-content h1 {
+    font-size: 100px;
+}
+
+header .header-content {
+    width: 50%;
+    height: 50%;
+}
+
+
+/* end contact style */
+
+main .contact-us {
+    display: flex;
+    padding: 20px 20px;
+    justify-content: center;
+    background-color: rgb(20, 20, 20);
+    flex-wrap: wrap;
+}
+
+main .contact-us .cForm {
+    margin: 0 40px 20px 0;
+    width: 40vw;
+}
+
+main .contact-us .cForm input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+main .contact-us .cMaps iframe {
+    width: 500px;
+    display: block;
+}
+
+main .contact-us .cForm .cNamePhone {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+
+main .contact-us .cForm button {
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    background-color: #fddb3a;
+    font-weight: bold;
+    /* border-radius: 40px; */
+    margin-bottom: 10px;
+    color: white;
+}
+
+
+/* main .cMaps {}s */
+
+main .cMaps p {
+    font-size: 13px;
+    padding: 10px;
+    color: white;
+}
+
+main .cMaps p .title {
+    color: #fddb3a;
+    font-weight: bold;
+}
+
+
+/* The Modal (background) */
+
+@media all and (max-width:900px) {
+    main .contact-us {
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    main .contact-us .cForm {
+        width: 400px;
+    }
+    main .contact-us .cMaps iframe {
+        width: 400px;
+    }
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+main .Gallery {
+    display: flex;
+    justify-content: center;
+}
+
+main .Gallery .gallery-cars {
+    position: relative;
+    width: 25%;
+    height: 300px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+main .Gallery .gallery-cars:hover .gallery-img {
+    filter: none;
+    transform: scale(1.25);
+}
+
+main .Gallery .gallery-cars:hover .gallery-title {
+    /* top: 50%; */
+    /* transform: translateX(-50%); */
+    top: unset;
+    bottom: 0%;
+    opacity: 1;
+}
+
+main .Gallery .gallery-cars .gallery-img {
+    position: absolute;
+    filter: grayscale(100%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all .25s ease-in-out;
+}
+
+main .Gallery .gallery-cars .gallery-title {
+    color: white;
+    opacity: 0;
+    /* z-index: 10; */
+    position: absolute;
+    top: 100%;
+    /* left: 50%; */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.514);
+    transition: transform .25s ease-in-out, top .25s ease-in-out, opacity .8s ease-in-out;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    /* height: 100%; */
+}
+
+@media all and (max-width:1250px) {
+    main .Gallery {
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+}
+
+@media all and (max-width:1000px) {
+    main .Gallery {
+        /* flex-direction: column; */
+        /* flex-wrap: wrap; */
+    }
+    main .Gallery .gallery-cars {
+        width: 45%;
+    }
+}
+
+@media all and (max-width:723px) {
+    main .Gallery {
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        height: 100%;
+        /* width: 50%; */
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+}
