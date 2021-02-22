@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+
+    <!--FONT AWESOME-->
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Gallery</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="mbackground">
+            <img src="../images/Porsche-911-Turbo.jpg" alt="ferrari f12berlinetta ferrada wheels">
+        </div>
+        <nav>
+            <ul>
+                <li class="logo">Luxury<span>Cars</span></li>
+                <li class="nav_links"><a href="../index.html">Home</a></li>
+                <li class="nav_links"><a href="Gallery.html">Gallery</a></li>
+                <li class="nav_links"><a href="booking.html">Booking</a></li>
+                <li class="nav_links"><a href="contact.html">Contact</a></li>
+                <li class="btn"><a href="#"><i class="fa fa-bars"></i></a></li>
+            </ul>
+        </nav>
+        <div class="header-gallery">
+            <!-- <h1 class="title_Gallery">Feel free to Contact us</h1> -->
+        </div>
+    </header>
+    <!-- end header -->
+    <!-- main -->
+    <main>
+        <div class="booking">
+            <!-- Contact Form -->
+            <form>
+
+                <div class="b-line">
+                    <label>number of days </label>
+                    <input type="number" id="numberDays">
+                </div>
+
+                <div class="b-line">
+                    <label>Choose the vehicle type</label>
+                    <select name="vehicule" id="vehicle-type" onchange="">
+                        <option>Select your option</option>
+                        <option id="city-car">City Car</option>
+                        <option id="utility-car">Utility Vehicle</option>
+                        <option id="compact-car">Compact Car</option>
+                        <option id="sedan-car">Sedan Car</option>
+                        <option id="motocycle">Motorcycle</option>
+                        <option id="heavy-equipment">Heavy Equipment</option>
+                        <option id="truck">Truck</option>
+                    </select>
+                </div>
+
+                <div class="b-line">
+                    <label>Energy</label>
+                    <select name="energy" id="energy-type" onchange="">
+                        <option value="">Select your option</option>
+                        <option class="energy" value="0.14" id="gasoline">Gasoline</option>
+                        <option class="energy" value="0.05" id="electric">Electric</option>
+                        <option class="energy" value="0.09" id="hybird">Hybrid</option>
+                        <option class="energy" value="0.21" id="diesel">Diesel</option>
+                    </select>
+                </div>
+
+                <div class="b-line">
+                    <label>Transmission</label>
+                    <select name="transmission" id="transmission-type" onchange="">
+                        <option value="">Select your option</option>
+                        <option class="transmission" id="manual">Manual</option>
+                        <option class="transmission" id="automatic">Automatic</option>
+                    </select>
+                </div>
+
+                <a href="#"><button type="button" onclick="">Submit</button></a>
+
+            </form>
+
+        </div>
+
+    </main>
+    <!-- end main -->
+
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+
+            <div class="row">
+                <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="row">
+                Copyright © 2021 luxury Cars - All rights reserved
+            </div>
+        </div>
+    </footer>
+
+    <!-- end footer -->
+    <script src="../scripts/script.js"></script>
+</body>
+
+
+</html>
