@@ -32,23 +32,22 @@
                 <li class="btn"><a href="#"><i class="fa fa-bars"></i></a></li>
             </ul>
         </nav>
-        <div class="header-gallery">
-            <!-- <h1 class="title_Gallery">Feel free to Contact us</h1> -->
+        <div class="header-title">
+            <h1 class="title_booking">We have prepared a whole fleet for you, so book now and live the adventure</h1>
         </div>
     </header>
     <!-- end header -->
     <!-- main -->
     <main>
         <div class="booking">
-            <!-- Contact Form -->
+            <!-- Booking Form -->
             <form>
-
-                <div class="b-line">
+                <div class="row-b">
                     <label>number of days </label>
                     <input type="number" id="numberDays">
                 </div>
 
-                <div class="b-line">
+                <div class="row-b">
                     <label>Choose the vehicle type</label>
                     <select name="vehicule" id="vehicle-type" onchange="">
                         <option>Select your option</option>
@@ -62,18 +61,18 @@
                     </select>
                 </div>
 
-                <div class="b-line">
-                    <label>Energy</label>
-                    <select name="energy" id="energy-type" onchange="">
+                <div class="row-b">
+                    <label>Fuel</label>
+                    <select name="fuel" id="Fuel-type" onchange="">
                         <option value="">Select your option</option>
-                        <option class="energy" value="0.14" id="gasoline">Gasoline</option>
-                        <option class="energy" value="0.05" id="electric">Electric</option>
-                        <option class="energy" value="0.09" id="hybird">Hybrid</option>
-                        <option class="energy" value="0.21" id="diesel">Diesel</option>
+                        <option class="fuel" value="0.14" id="gasoline">Gasoline</option>
+                        <option class="fuel" value="0.05" id="electric">Electric</option>
+                        <option class="fuel" value="0.09" id="hybird">Hybrid</option>
+                        <option class="fuel" value="0.21" id="diesel">Diesel</option>
                     </select>
                 </div>
 
-                <div class="b-line">
+                <div class="row-b">
                     <label>Transmission</label>
                     <select name="transmission" id="transmission-type" onchange="">
                         <option value="">Select your option</option>
@@ -82,10 +81,14 @@
                     </select>
                 </div>
 
-                <a href="#"><button type="button" onclick="">Submit</button></a>
-
+                <a href="#"><button type="button" onclick="">Book Now</button></a>
             </form>
-
+            <div class="pricedisplay">
+                <h3>Your total is
+                    <p id="priceis"></p>
+                </h3>
+                <input type="checkbox" id="#checkprice"><button type="button">Proceed</button>
+            </div>
         </div>
 
     </main>

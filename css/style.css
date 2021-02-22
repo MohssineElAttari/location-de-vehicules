@@ -653,3 +653,168 @@ main .Gallery .gallery-cars .gallery-title {
         flex-direction: column;
     }
 }
+
+
+/* booking */
+
+
+/* booking Form */
+
+.booking {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.booking .row-b {
+    /* justify-content: flex-end; */
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.booking .row-b label {
+    display: inline-block;
+    margin-right: 18px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.row-b input,
+.row-b select {
+    width: 300px;
+    padding-left: 15px;
+    height: 50px;
+    border: px solid #00000080;
+    outline: none;
+    transition: 0.5s;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.row-b input:focus,
+.row-b select:focus {
+    border-color: #fddb3a;
+}
+
+.booking a {
+    text-decoration: none;
+}
+
+.booking a button {
+    align-self: center;
+    border: none;
+    border-radius: 20px;
+    margin-top: 15px;
+    padding: 10px 25px;
+    color: #ffffff;
+    background-color: #000000;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    left: 50%;
+    /* transform: translateX(-50%); */
+    width: 140px;
+    height: 50px;
+    font-size: 18px;
+}
+
+.booking a button:hover {
+    background-color: #fddb3a;
+}
+
+.row-b .energy {
+    display: none;
+}
+
+.row-b .transmission {
+    display: none;
+}
+
+
+/* End Resrvation Form */
+
+@media all and (max-width: 1200px) {
+    .header-title h1 {
+        font-size: 40px !important;
+        /* text-align: center; */
+    }
+}
+
+@media all and (max-width: 769px) {
+    .header-title h1 {
+        font-size: 35px !important;
+        /* text-align: center; */
+    }
+    /* Resrvation Form */
+    .booking.booking .row-b {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+    .row-b {
+        padding: 10px !important;
+    }
+    .row-b input,
+    .row-b select {
+        padding: 0 10px !important;
+        height: 30px !important;
+    }
+    .booking .booking .row-b label {
+        margin: 0 0 10px 0 !important;
+    }
+    /* End Resrvation Form */
+}
+
+.pricedisplay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    background-color: #eeeff1;
+    padding: 30px 0 60px 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#checkprice:checked~.pricedisplay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.pricedisplay h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+.pricedisplay p {
+    font-weight: bolder;
+    font-size: 2rem;
+    color: #fddb3a;
+}
+
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+
+.header-title h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+
+/* .header-title .title_booking {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+} */
