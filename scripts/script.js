@@ -48,3 +48,74 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+// booking
+
+var selected, Fuel = 0,
+    dailyPrice, Percent = 0,
+    duration, total_globale;
+
+selected = document.getElementById("vehicle-type").value;
+console.log(selected);
+
+function choix_Fuel() {
+    Fuel = document.getElementById("Fuel-type").value;
+}
+
+function choix_vehicle() { //e=moto
+    switch (selected) {
+
+        case "city-car":
+            document.querySelector("#electric").style.display = "block";
+            document.querySelector("#hybird").style.display = "block";
+            document.querySelector("#gasoline").style.display = "block";
+            document.querySelector("#diesel").style.display = "block";
+            document.querySelector("#manual").style.display = "block";
+            dailyPrice = 12;
+        case "utility-car":
+            document.querySelector("#diesel").style.display = "block";
+            document.querySelector("#manual").style.display = "block";
+            dailyPrice = 16;
+        case "compact-car":
+            document.querySelector("#electric").style.display = "block";
+            document.querySelector("#hybird").style.display = "block";
+            document.querySelector("#gasoline").style.display = "block";
+            document.querySelector("#diesel").style.display = "block";
+            document.querySelector("#manual").style.display = "block";
+            dailyPrice = 12;
+        case "sedan-car":
+            document.querySelector("#hybird").style.display = "block";
+            document.querySelector("#gasoline").style.display = "block";
+            document.querySelector("#diesel").style.display = "block";
+            document.querySelector("#automatic").style.display = "block";
+            dailyPrice = 20;
+            Percent = 0.19;
+        case "motocycle":
+            document.querySelector("#gasoline").style.display = "block";
+            document.querySelector("#electric").style.display = "block";
+            dailyPrice = 10;
+            break;
+
+        case "heavy-equipment":
+            document.querySelector("#gasoline").style.display = "block";
+            document.querySelector("#diesel").style.display = "block";
+            document.querySelector("#manual").style.display = "block";
+            dailyPrice = 900;
+        case "truck":
+            document.querySelector("#diesel").style.display = "block";
+            document.querySelector("#automatic").style.display = "block";
+            dailyPrice = 250;
+            Percent = 0.19;
+    }
+}
+
+function price() {
+    var number_Days = document.getElementById("numberDays").value;
+
+    // Price of booking calculation
+
+    total_globale = (dailyPrice + (dailyPrice * (Fuel + Percent))) * number_Days;
+
+    getElementById('priceis').innerHTML = total;
+
+}

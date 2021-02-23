@@ -49,7 +49,7 @@
 
                 <div class="row-b">
                     <label>Choose the vehicle type</label>
-                    <select name="vehicule" id="vehicle-type" onchange="">
+                    <select name="vehicule" id="vehicle-type" onchange="choix_vehicle()">
                         <option>Select your option</option>
                         <option id="city-car">City Car</option>
                         <option id="utility-car">Utility Vehicle</option>
@@ -63,7 +63,7 @@
 
                 <div class="row-b">
                     <label>Fuel</label>
-                    <select name="fuel" id="Fuel-type" onchange="">
+                    <select name="fuel" id="Fuel-type" onchange="choix_Fuel()">
                         <option value="">Select your option</option>
                         <option class="fuel" value="0.14" id="gasoline">Gasoline</option>
                         <option class="fuel" value="0.05" id="electric">Electric</option>
@@ -74,14 +74,14 @@
 
                 <div class="row-b">
                     <label>Transmission</label>
-                    <select name="transmission" id="transmission-type" onchange="">
+                    <select name="transmission" id="transmission-type" onchange="choix_vehicle()">
                         <option value="">Select your option</option>
                         <option class="transmission" id="manual">Manual</option>
                         <option class="transmission" id="automatic">Automatic</option>
                     </select>
                 </div>
 
-                <a href="#"><button type="button" onclick="">Book Now</button></a>
+                <a href="#"><button type="button" onclick="price()">Book Now</button></a>
             </form>
             <div class="pricedisplay">
                 <h3>Your total is
