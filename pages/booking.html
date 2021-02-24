@@ -49,15 +49,15 @@
 
                 <div class="row-b">
                     <label>Choose the vehicle type</label>
-                    <select name="vehicule" id="vehicle-type" onchange="choix_vehicle()">
+                    <select name="vehicule" id="vehicle-type" onchange="vehicle_fun()">
                         <option>Select your option</option>
-                        <option id="city-car">City Car</option>
-                        <option id="utility-car">Utility Vehicle</option>
-                        <option id="compact-car">Compact Car</option>
-                        <option id="sedan-car">Sedan Car</option>
-                        <option id="motocycle">Motorcycle</option>
-                        <option id="heavy-equipment">Heavy Equipment</option>
-                        <option id="truck">Truck</option>
+                        <option class="city" value="City Car">City Car</option>
+                        <option class="utility" value="Utility Vehicle">Utility Vehicle</option>
+                        <option class="compact" value="Compact Car">Compact Car</option>
+                        <option class="sedan" value="Sedan Car">Sedan Car</option>
+                        <option class="motorcycle" value="Motorcycle">Motorcycle</option>
+                        <option class="heavy" value="Heavy Equipment">Heavy Equipment</option>
+                        <option class="truck" value="Truck">Truck</option>
                     </select>
                 </div>
 
@@ -65,30 +65,24 @@
                     <label>Fuel</label>
                     <select name="fuel" id="Fuel-type" onchange="choix_Fuel()">
                         <option value="">Select your option</option>
-                        <option class="fuel" value="0.14" id="gasoline">Gasoline</option>
-                        <option class="fuel" value="0.05" id="electric">Electric</option>
-                        <option class="fuel" value="0.09" id="hybird">Hybrid</option>
-                        <option class="fuel" value="0.21" id="diesel">Diesel</option>
+                        <option class="fuel gasoline" value="0.14" id="gasoline">Gasoline</option>
+                        <option class="fuel electric" value="0.05" id="electric">Electric</option>
+                        <option class="fuel hybrid" value="0.09" id="hybird">Hybrid</option>
+                        <option class="fuel diesel" value="0.21" id="diesel">Diesel</option>
                     </select>
                 </div>
 
                 <div class="row-b">
                     <label>Transmission</label>
-                    <select name="transmission" id="transmission-type" onchange="choix_vehicle()">
+                    <select name="transmission" id="transmission-type" onchange="boite_choix()">
                         <option value="">Select your option</option>
-                        <option class="transmission" id="manual">Manual</option>
-                        <option class="transmission" id="automatic">Automatic</option>
+                        <option class="boite" value="manual" id="manual">Manual</option>
+                        <option class="boite" value="automatic" id="automatic">Automatic</option>
                     </select>
                 </div>
 
-                <a href="#"><button type="button" onclick="price()">Book Now</button></a>
+                <button class="btn_calc" type="button">Book Now</button>
             </form>
-            <div class="pricedisplay">
-                <h3>Your total is
-                    <p id="priceis"></p>
-                </h3>
-                <input type="checkbox" id="#checkprice"><button type="button">Proceed</button>
-            </div>
         </div>
 
     </main>

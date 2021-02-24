@@ -701,7 +701,7 @@ main .Gallery .gallery-cars .gallery-title {
     text-decoration: none;
 }
 
-.booking a button {
+button {
     align-self: center;
     border: none;
     border-radius: 20px;
@@ -721,7 +721,7 @@ main .Gallery .gallery-cars .gallery-title {
     font-size: 18px;
 }
 
-.booking a button:hover {
+button:hover {
     background-color: #fddb3a;
 }
 
